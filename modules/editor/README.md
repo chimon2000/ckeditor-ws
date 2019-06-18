@@ -1,8 +1,12 @@
+# @awesome/editor
+
+This module was bootstrapped with [tsdx](https://github.com/palmerhq/tsdx).
+
 ## Commands
 
 TSDX scaffolds your new library inside `/src`.
 
-The recommended workflow is to run TSDX in one terminal:
+The recommended workflow is to run docz in one terminal:
 
 ```
 npm run docz:dev # or yarn docz:dev
