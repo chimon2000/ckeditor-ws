@@ -1,0 +1,25 @@
+---
+name: Editor
+---
+
+import { Playground, Props } from 'docz'
+import { Editor } from './Editor'
+import Toolbar from '../toolbar'
+
+# Editor
+
+## Properties
+
+<Props of={Editor} />
+
+## Basic usage
+
+<Playground>
+    <Toolbar />
+    <Editor
+        onInit={editor => console.log('onInit', editor)}
+        onBlur={() => console.log('onBlur')}
+        onFocus={editor => console.log('onBlur')}
+        onChange={(event, editor) => console.log('onChange', event, editor.getData())}
+    />
+</Playground>
