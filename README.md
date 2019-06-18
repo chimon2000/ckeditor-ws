@@ -12,7 +12,9 @@ The application can be ran using the same command from either the application ro
 
 From the project root, run `yarn start` in your terminal.
 
-### Running Docz
+### Running the playground
+
+The [Docz] playground can be ran using from the **modules/editor** folder.  You can read more about the commands available for the app [here](modules/editor).
 
 From the **modules/editor** directory, run `yarn docz:dev` in your terminal.
 
@@ -22,16 +24,19 @@ From the **modules/editor** directory, run `yarn docz:build` in your terminal.
 
 ## Dependencies
 
-[React] - a JavaScript library for building user interfaces
+[React] - a JavaScript library for building user interfaces.
 
-[Yarn] - a package manager for your code
+[Yarn] - a package manager for your code.
 
-[tsdx] - a zero-config CLI for TypeScript package development 
+[tsdx] - a zero-config CLI for TypeScript package development.
 
-[CKEditor] - A set of ready to use rich text editors
+[Docz] - a zero-config library for documenting things.
+
+[CKEditor] - A set of ready to use rich text editors.
 
 [React]: https://reactjs.org/
 [Create React App]: https://facebook.github.io/create-react-app/
 [CKEditor]: https://ckeditor.com/ckeditor-5/
 [tsdx]: https://github.com/palmerhq/tsdx
 [Yarn]: https://yarnpkg.com/en/docs/getting-started
+[Docz]: https://www.docz.site/docs/introduction
