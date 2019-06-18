@@ -8,19 +8,15 @@ From the project root run `yarn`
 
 ### Running the application
 
-The application can be ran using the same command from either the application root or the **modules/app** folder.  You can read more about the commands available for the app [here](modules/app).
+The application can be ran using the same command from either the application root or the **modules/app** folder.  You can read more about the commands available for the app module [here](modules/app).
 
 From the project root, run `yarn start` in your terminal.
 
 ### Running the playground
 
-The [Docz] playground can be ran using from the **modules/editor** folder.  You can read more about the commands available for the app [here](modules/editor).
+The [Docz] playground can be ran using from the **modules/editor** folder.  You can read more about the commands available for the editor module [here](modules/editor).
 
 From the **modules/editor** directory, run `yarn docz:dev` in your terminal.
-
-### Building Docz site
-
-From the **modules/editor** directory, run `yarn docz:build` in your terminal.
 
 ## Dependencies
 
