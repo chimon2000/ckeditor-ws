@@ -1,6 +1,6 @@
 # ckeditor-ws
 
-The purpose of this repository is to demonstrate how to build a [React] application using a monorepo.  [Yarn] is used to manage dependencies.  The app module uses [Create React App] and the editor module uses [tsdx].
+The purpose of this repository is to demonstrate how to build a [React] application using a monorepo.  [Yarn] is used to manage dependencies.  The app module uses [Create React App] for application development and the editor module uses [tsdx] and [Docz] for the component development.
 
 ## Getting Started
 
