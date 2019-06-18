@@ -3,7 +3,7 @@ import CKEditor from '@ckeditor/ckeditor5-react'
 import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document'
 import { useEditor } from '../contexts'
 
-export type ExecuteCommands =
+type ExecuteCommands =
     | 'bold'
     | 'italic'
     | 'underline'

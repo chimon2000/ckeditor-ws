@@ -1,14 +1,14 @@
 import React, { useState, ReactNode, useContext, createContext, useEffect } from 'react'
 
 export function EditorProvider(props: { children?: ReactNode }) {
-    const [currentEditor, setCurrentEditor] = useState<Editor | undefined>()
+    const [currentEditor, setCurrentEditor] = useState<CurrentEditor | undefined>()
     const [enabledCommands, setEnabledCommands] = useState<{ [x: string]: boolean }>({})
 
     useEffect(() => {
         const commandHandlers: { command: string; handler(e): void }[] = []
 
         if (currentEditor) {
-            commands.forEach((command) => {
+            commands.forEach(command => {
                 commandHandlers.push({ command, handler: handleCommandChanged })
                 currentEditor.commands.get(command).on('change', handleCommandChanged)
             })
@@ -16,9 +16,7 @@ export function EditorProvider(props: { children?: ReactNode }) {
 
         return () => {
             if (currentEditor) {
-                commandHandlers.forEach(({ command, handler }) =>
-                    currentEditor.commands.get(command).off(handler)
-                )
+                commandHandlers.forEach(({ command, handler }) => currentEditor.commands.get(command).off(handler))
             }
         }
     }, [currentEditor])
@@ -26,9 +24,7 @@ export function EditorProvider(props: { children?: ReactNode }) {
     const handleCommandChanged = () => {
         const enabledCommands = {}
         if (currentEditor) {
-            commands.forEach(
-                (command) => (enabledCommands[command] = currentEditor.commands.get(command).value)
-            )
+            commands.forEach(command => (enabledCommands[command] = currentEditor.commands.get(command).value))
         }
 
         setEnabledCommands(enabledCommands)
@@ -45,7 +41,7 @@ export function EditorProvider(props: { children?: ReactNode }) {
         <EditorContext.Provider
             value={{
                 currentEditor,
-                setCurrentEditor: (editor) => setCurrentEditor(editor),
+                setCurrentEditor: editor => setCurrentEditor(editor),
                 executeCommand,
                 enabledCommands
             }}>
@@ -86,8 +82,8 @@ type EditorSubscriberProps = {
 type InjectedEditorSubscriberProps = EditorContextProps
 
 type EditorContextProps = {
-    currentEditor?: Editor
-    setCurrentEditor(editor?: Editor): void
+    currentEditor?: CurrentEditor
+    setCurrentEditor(editor?: CurrentEditor): void
     executeCommand(command: ExecuteCommands, options?): void
     enabledCommands: { [x: string]: boolean }
 }
@@ -103,7 +99,7 @@ export type ExecuteCommands =
     | 'outdent'
     | 'heading'
 
-export type Editor = {
+type CurrentEditor = {
     execute(command: ExecuteCommands, options?): void
     editing: { view: { focus(): void } }
     commands: any

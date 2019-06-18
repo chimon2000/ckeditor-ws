@@ -10,6 +10,7 @@
         "dist"
     ],
     "scripts": {
+        "preinstall": "yarn build",
         "start": "tsdx watch",
         "build": "tsdx build",
         "docz:dev": "docz dev",

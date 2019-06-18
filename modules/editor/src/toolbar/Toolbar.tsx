@@ -4,7 +4,7 @@ import { useEditor } from '../contexts'
 export function Toolbar() {
     const editor = useEditor()
     const isDisabled = !editor.currentEditor
-    console.log({ isDisabled })
+
     return (
         <div>
             <button disabled={isDisabled} onClick={() => editor.executeCommand('bold')}>
